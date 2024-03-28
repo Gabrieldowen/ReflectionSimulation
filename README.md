@@ -1,4 +1,9 @@
 # vectorReflectionPlayground
+
+<img width="788" alt="snapshot" src="https://github.com/Gabrieldowen/vectorReflectionPlayground/assets/94488674/6651f501-fbe1-4c97-8005-056e6a5f26bd">
+
+
+
 This project was an assignment from Computer Graphics by Chris Weaver at the University of Oklahoma. It deals with vectors, geometric objects, line intersection, and reflecting trajectories. The project was build in Java with the openGL library
 
 To run on mac:
