@@ -1,0 +1,145 @@
+//******************************************************************************
+// Copyright (C) 2019-2024 University of Oklahoma Board of Trustees.
+//******************************************************************************
+// Last modified: Fri Jan 19 14:27:44 2024 by Chris Weaver
+//******************************************************************************
+// Major Modification History:
+//
+// 20190118 [weaver]:   Original file (for Gradle 5.1).
+// 20200122 [weaver]:	Updated to Gradle 6.1.
+// 20210202 [weaver]:	Updated to Gradle 6.8.1. Updated plugins+dependencies.
+// 20220112 [weaver]:	Updated to Gradle 7.3.3. Updated plugins+dependencies.
+// 20230113 [weaver]:	Updated to Gradle 7.6.
+// 20240119 [weaver]:	Updated to Gradle 8.5. Updated plugins+dependencies.
+//
+//******************************************************************************
+
+
+
+//***** Getting Started **********************************************
+
+Building and running requires Java 1.8. Make sure it's installed.
+
+This build comes with Gradle version 8.5 included as the Gradle Wrapper.
+You can install Gradle on your system separately, but it's not required.
+
+On the command line, make sure you're in this file's parent directory.
+Type in Gradle commands (based on your system) to execute build tasks:
+
+  gradlew <task>              // ...if your system is Mac or Linux
+  gradlew.bat <task>          // ...if your system is Windows
+
+Depending on how you have your command line PATH set up, you may need to
+preface all commands with a '.' to indicate the current directory, i.e.:
+
+  ./gradlew <task>              // ...if your system is Mac or Linux
+  .\gradlew.bat <task>          // ...if your system is Windows
+
+The most common commands used in development are summarized below.
+
+The shortcut command to run the project's 'base' application is:
+
+  gradlew run       // ...if your system is Mac or Linux
+  gradlew.bat run   // ...if your system is Windows
+
+To run other project applications, see the instructions for installDist below.
+
+Refer to Gradle's excellent online documentation to learn more:
+
+  Main site - https://gradle.org
+  User docs - https://docs.gradle.org/current/userguide/userguide.html
+  Directories - https://docs.gradle.org/current/userguide/directory_layout.html
+
+
+//***** General Commands *********************************************
+
+// View help...
+gradlew help                // ...about Gradle
+gradlew help --task <task>  // ...about a task
+
+// See a list of available tasks.
+gradlew tasks
+
+
+//***** Build Commands ***********************************************
+
+// Removes all build results. (NOTE: This only removes the build/ directory.
+// It doesn't remove the .gradle/ cache directory. It also doesn't remove
+// hidden system-specific files like .DS_Store on MacOS.)
+gradlew clean
+
+// Generate all project executables as command line applications.
+// Go to build/install/base/bin/ to run them. Use the .bat versions on Windows.
+// You can run them from the command line or by double-clicking them.
+gradlew installDist
+
+To add a project executable, open build.gradle, scroll down to the 'Alternative
+Start Scripts' section at the end, and follow the instructions. (You are welcome
+to adapt build.gradle for use in team projects, but don't change anything in
+the build.gradle included in homework assignments without consulting me first!)
+
+
+//***** Distribution Commands ****************************************
+
+// Generate all project executables as above, and bundle them in a zip file.
+// Go to build/distributions/ to find the zip file.
+gradlew distZip
+
+
+//***** Documentation Commands ***************************************
+
+// Generate javadoc for the project.
+gradlew javadoc
+
+
+//***** Bundling (Shadow Jar) Commands *********
+
+// Bundle the project's 'base' application in a cross-platform executable jar.
+// Launch it like any other app. It should work on any system with Java 8.
+// Go to build/libs/ and look for the base-app-*.jar file.
+gradlew shadowJar
+
+
+// ***** IDE Commands ************************************************
+
+// Generate Eclipse IDE configuration files for each subproject.
+gradlew eclipse
+
+// Remove Eclipse IDE configuration files for each subproject.
+gradlew cleanEclipse
+
+// Open the project in Eclipse IDE.
+// In Eclipse IDE: [File] -> [Import] -> [Existing Projects into Workspace]
+
+
+// Generate IntelliJ IDEA configuration files for each subproject.
+gradlew idea
+
+// Remove IntelliJ IDEA configuration files for each subproject.
+gradlew cleanIdea
+
+// Open the project in IntelliJ IDEA.
+// In IntelliJ IDEA: [File] -> [Open Project]
+
+
+// Generate Visual Studio IDE configuration files for each subproject.
+gradlew visualStudio
+
+// Remove Visual Studio IDE configuration files for each subproject.
+gradlew cleanVisualStudio
+
+// Open the project in Visual Studio IDE.
+// In Visual Studio IDE: [File] -> [Open] -> [Project/Solution...]
+
+
+// Generate Xcode IDE configuration files for each subproject.
+gradlew xcode
+
+// Remove Xcode IDE configuration files for each subproject.
+gradlew cleanXcode
+
+// Open the project in Xcode IDE.
+// In Xcode IDE: [File] -> [Open]
+
+
+//******************************************************************************
